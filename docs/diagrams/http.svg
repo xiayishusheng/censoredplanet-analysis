@@ -5,6 +5,7 @@
  viewBox="0 0 600 218"
  xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges"
  stroke-width="1" text-rendering="geometricPrecision">
+<rect width="100%" height="100%" fill="white"/>
 <polygon fill="white" points="133,7 165,7 165,16 133,16"/>
 <text x="150" y="16" textLength="31" font-family="Helvetica" font-size="12" fill="black" text-anchor="middle">
 

@@ -116,13 +116,11 @@ Mismatch Errors are used when the connection is successful, but the content rece
 | http.empty              | Received no content when HTTP content was expected |
 | http.truncated_response | The HTTP response content was unexpectedly truncated |
 |                         |
-| **Mismatch Errors**     | The connection completed successfully, but the content returned didn't match the content expected for the domain. |
+| **Mismatch Errors**     | The connection completed successfully, but the content returned didn't match the content expected for the vantage point ip. |
 |                         |
-| HyperQuack v1 only      |
 | response_mismatch       | Received a different response from the one expected. </br> For Discard no response is expected and any response is a mismatch, </br> for Echo a mirrored response is expected and anything else is a mismatch. |
 | status_mismatch         | The HTTP status code didn't match, eg. `403` instead of `200` |
 | body_mismatch           | The HTTP body didn't match, potentially a blockpage |
 | tls_mismatch            | An element of the TLS connection (certificate, cipher suite, or TLS version) didn't match |
-| HyperQuack v1 and v2    |
-| template_mismatch       | Some element of the response did not match the expected template |
-| blockpage               | The response was unexpected and matched a [known blockpage]((https://github.com/censoredplanet/censoredplanet-analysis/blob/master/pipeline/metadata/data/blockpage_signatures.json)) |
+| template_mismatch       | Some element of the response did not match the expected template. This outcome is a superset of the status/body/tls_mismatch outcomes above, and appears when a more specific outcome is not available. |
+| blockpage               | The response was unexpected and matched a [known blockpage]((https://github.com/censoredplanet/censoredplanet-analysis/blob/master/pipeline/metadata/data/blockpage_signatures.json)) This outcome may also appear with a matching blockpage signature appended, for example `content/blockpage:e_unk_china_web_blocked`. These signatures can be checked in the [blockpage signatures file](../pipeline/metadata/data/blockpage_signatues.json) |
